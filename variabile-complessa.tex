@@ -1,0 +1,56 @@
+\chapter{Le funzioni a variabile complessa}
+
+Sia $f:D\subset \C \to \C$, dove D è un dominio, cioè un insieme aperto e connesso. Ridefiniamo alcune nozioni base:
+\begin{definizione}
+f si dice continua in $z_0 \in D$ se $\forall \epsilon$>0 $\exists \delta_{\epsilon , z_0} : \, |f(z)-f(z_0)|$<$\epsilon \, \forall z: \, |z-z_0|$<$ \delta_{\epsilon , z_0} $
+\end{definizione}
+\begin{definizione}
+f è derivabile in $z_0$ se esiste finito il
+$$\lim_{z \to z_0} {\frac{f(z)-f(z_0)}{z-z_0} =f'(z_0)}$$
+La funzione $f(z)$ si dice olomorfa in $z_0$ se esiste $f'(z_0)$, cioè:
+ $$\forall \epsilon>0 \, \, \exists \delta_{\epsilon , z_0} : \, \left|\frac{f(z)-f(z_0)}{z-z_0} - f'{z_0}\right|< \epsilon \, \forall z: \, |z-z_0|<\delta_{\epsilon , z_0} $$
+\end{definizione}
+
+Introduciamo ora un importante risultato che lega le derivate parziali di una funzione olomorfa, le condizioni di Cauchy-Riemann:
+\begin{teorema}(Condizioni di Cauchy-Riemann)\\
+Sia f derivabile in $z_0$, dove f e $z_0$ sono rispettivamente della forma $u+iv$ e $x_0+iy_0$. Allora esistono le derivate parziali di $u$ e $v$ -che, in generale, saranno  funzioni di $x$ e $y$- nel punto $(x_0,y_0)$ e valgono:
+$$\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}$$
+$$\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$$
+\end{teorema}
+
+
+\begin{proof}
+Per ipotesi, esiste il $\lim_{\xi \to 0} \frac{f(z_0+ \xi)-f(z_0)}{\xi} =f'(z_0)$, con $\xi \in \C$. \\Se $\xi=h \in \R$:
+$$\frac{u(x_0 +h,y_0)+iv(x_0 +h,y_0)- (u(x_0,y_0)+iv(x_0 ,y_0)) }{h}=$$
+$$=\frac{u(x_0 +h,y_0)+u(x_0,y_0)}{h} -i\frac{v(x_0+h,y_0)+v(x_0 ,y_0)}{h} \to f'(z_0) \text{ per } h \to 0$$
+Quindi, otteniamo che 
+$$\left. f'(z_0)=\frac{\partial u}{\partial x} \right|_{(x_0,y_0)} +i  \left. \frac{\partial v}{\partial x} \right|_{(x_0,y_0)}$$
+Se invece $\xi=ih$, abbiamo:
+$$\frac{u(x_0,y_0+h)+iv(x_0,y_0+h)-(u(x_0,y_0)+iv(x_0 ,y_0))}{ih}=$$
+$$=\frac{u(x_0,y_0+h)+u(x_0,y_0)}{ih}-i\frac{v(x_0,y_0+h)+v(x_0 ,y_0)}{ih} \to f'(z_0) \text{ per } h \to 0$$
+Quindi, otteniamo che 
+$$f'(z_0)=\left. \frac{1}{i} \frac{\partial u}{\partial y} \right|_{(x_0,y_0)} +\left. \frac{\partial v}{\partial y} \right|_{(x_0,y_0)}=\left. \frac{\partial v}{\partial y} \right|_{(x_0,y_0)}-i \left. \frac{\partial u}{\partial y} \right|_{(x_0,y_0)}$$
+Confrontando i due risultati, otteniamo la tesi.
+
+\end{proof}
+
+Se $u$ e $v$ hanno derivate parziali continue in un disco centrato su $z_0$ e valgono le condizioni di Cauchy-Riemann in $z_0$, allora f è derivabile in $z_0$. Inoltre, continuano a valere le regole di derivazione ricavate per funzioni reali a variabile reale.
+
+\subsection{Il significato della derivata}
+
+Nel campo reale, la derivata rappresentava il coefficiente angolare della retta tangente al grafico in un dato punto; che significato ha nel campo complesso?
+
+Consideriamo una curva $\phi :[a,b] \to \C$ passante per $z_0$ e differeziabile con continuità. Supponiamo $\gamma(t_0)=z_0$; $\dot{\gamma}(t_0)$ è il vettore tangente alla curva in $z_0$. Attraverso la funzione $f$ la curva $\gamma$ va a finire in un'altra curva, $f(\gamma(t))$; chi è il vettore tangente a questa nuova curva? Derivando, otteniamo:
+$$\left. \frac{d}{dt}f(\gamma(t))\right|_{t_0} =\dot{\gamma}(t_0) f'(\gamma(t_0)) =\dot{\gamma}(t_0) f'(z_0)$$
+Quindi la derivata rappresenta un fattore di scala (locale) che modifica la lunghezza del vettore tangente $f'(z_0)$. Vediamo come si comporta la funzione argomento:
+$$arg[\dot{\gamma}(t_0) f'(\gamma(t_0))]=arg[\dot{\gamma}(t_0)]+arg[ f'(\gamma(t_0))]$$ cioè, localmente abbiamo una rotazione fissa.
+
+Per capire meglio tale affermazione, immaginiamo di avere due curve incidenti; ognuna di esse avrà un vettore tangente nel punto di intersezione, e tali vettori avranno un angolo fra di essi. Tali vettori, tramite la derivazione, vengono moltiplicati per lo stesso fattore di scala e vengono ruotati dello stesso angolo; quindi l'angolo fra di essi rimane invariato.
+
+Cosa succede se la derivata si annulla? In questi casi, l'angolo fra i vettori tangenti non viene conservato (ad esempio, immagine tramite la funzione $f(z)=z^2$ del quadrato unitario avente vertice nell'origine degli assi).
+
+\section{Altre proprietà}
+
+Abbiamo visto che, se $f(z)=u(x,y)+iv(x,y)$ è una funzione olomorfa, valgono le condizioni di Cauchy-Riemann, cioè $\frac{\partial u}{\partial x}=\frac{\partial  v}{\partial y}$ e $\frac{\partial  u}{\partial y}=-\frac{\partial v}{\partial x}$. Dalle derivate seconde ricaviamo  una proprietà molto utile, cioè che le funzioni $u$ e $v$ sono  armoniche ($\nabla^2 u=0$, $\nabla^2 v=0$); infatti:
+$$\frac{\partial^2 u}{\partial x^2}=\frac{\partial^2 v}{\partial y \partial x}=-\frac{\partial^2 u}{\partial y^2} \text{; ma allora si ha che } \frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}=0 \text{ e, similmente, } \frac{\partial^2 v}{\partial x^2}+\frac{\partial^2 v}{\partial y^2}=0$$
+Quindi, attraverso le formule di Cauchy-Riemann, possiamo passare da $u$ a $v$ e viceversa, a meno di una costante (rappresentata dal segno).
