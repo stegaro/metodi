@@ -3,9 +3,9 @@
 \section{Serie numeriche}
 
 Come nel campo dei reali, la serie numerica è scritta come $\sum_{i=0} ^{\infty} a_i$ con $a_i \in \C$; definita la successione delle somme parziali $S_n=\sum_{i=0} ^n a_i$, recuperiamo tutte le informazioni sulla convergenza già viste in altri ambiti:
-\begin{teorema} (Criterio di convergenza secondo Cauchy)\\$S_n$ converge $\iff$ $S_n$ è di Cauchy, cioè se $\forall \epsilon >0 \exists N_{\epsilon}$ : $|S_{m+n} - s_m| < \epsilon$ $\forall m>N_{\epsilon}, \forall n>0$
+\begin{teorema} (Criterio di convergenza secondo Cauchy)\\$S_n$ converge $\iff$ $S_n$ è di Cauchy, cioè se $\forall \epsilon >0 \exists N_{\epsilon}$ : $|S_{m+n} - S_m| < \epsilon$ $\forall m>N_{\epsilon}, \forall n>0$
 \end{teorema}
-La condizione che $|S_{m+n} - s_m| < \epsilon$ equivale a chiedere che $\left|\sum_{i=m+1} ^{m+n} a_i \right| < \epsilon$. \\Osserviamo che la condizione necessaria per la convergenza è che il termine generale (in modulo) vada a zero (questo perchè le formule sopra valgono $\forall m,n$). Oltretutto, abbiamo che $\left|\sum_{i=m+1} ^{m+n} a_i \right| \leq \sum_{i=m+1} ^{m+n} |a_i|$; definiamo quindi la \textbf{convergenza assoluta}, cioè la convergenza della serie dei moduli.
+La condizione che $|S_{m+n} - S_m| < \epsilon$ equivale a chiedere che $\left|\sum_{i=m+1} ^{m+n} a_i \right| < \epsilon$. \\Osserviamo che la condizione necessaria per la convergenza è che il termine generale (in modulo) vada a zero (questo perchè le formule sopra valgono $\forall m,n$). Oltretutto, abbiamo che $\left|\sum_{i=m+1} ^{m+n} a_i \right| \leq \sum_{i=m+1} ^{m+n} |a_i|$; definiamo quindi la \textbf{convergenza assoluta}, cioè la convergenza della serie dei moduli.
 \begin{teorema}
 Se una serie converge assolutamente, allora converge, cioè 
 $$\sum |a_i|<\infty \implies \sum a_i<\infty$$
@@ -16,7 +16,7 @@ I criteri per la convergenza assoluta sono:
 \item Criterio della radice:		$\limsup_i \sqrt[i] {|a_i|} <1 \implies \sum a_i$ converge
 \item Criterio del rapporto:		$\limsup_i \frac{a_{i+1}}{a_i}<1 \implies \sum a_i$ converge
 \end{itemize}
-	Sia nel caso del criterio del confronto sia nel caso del criterio della radice, nel momento in cui esiste il limite normale non dobbiamo scomodale il lim sup, ma possiamo ricorrere al limite semplice.
+Sia nel caso del criterio del confronto sia nel caso del criterio della radice, nel momento in cui esiste il limite normale non dobbiamo scomodare il $\limsup$, ma possiamo ricorrere al limite semplice.
 
 \section{Serie geometrica}
 
@@ -143,9 +143,9 @@ $$f(z)=\oint_{C(a,r)} \frac{f(z')}{z'-z} \frac{dz'}{2 i \pi}$$
 che, valutato in $z=a$, ci dà $c_0$, cioè $c_0=f(a)$. 
 \clearpage
 Similmente, abbiamo che
-$$f'(z)=\oint_{C(a,r)} \frac{f(z')}{(z-z')^1} \frac{dz'}{2 i \pi}$$
+$$f'(z)=\oint_{C(a,r)} \frac{f(z')}{(z'-z)^2} \frac{dz'}{2 i \pi}$$
 che, valutato in $z=a$, ci dà $c_1=f'(a)$. Procedendo in tale maniera, otteniamo che i coefficienti $c_n$ sono dati dalla formula:
-$$c_n=\frac{f^{(n)}(a)}{n!}=\oint_{C(a,r)} \frac{f(z)}{z-a} \frac{dz}{2 i \pi}$$
+$$c_n=\frac{f^{(n)}(a)}{n!}=\oint_{C(a,r)} \frac{f(z)}{(z-a)^{n+1}} \frac{dz}{2 i \pi}$$
 
 \section{Polinomi di Hermite}
 
