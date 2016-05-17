@@ -33,9 +33,7 @@ $$zz'=(x;y)(x';y')=(xx-yy'';x'y+xy')$$
 Anche in questo caso valgono tutte le proprietà del prodotto: commutatività, associatività, esistenza dell'elemento neutro $(1;0)$ e, se $z$ è non nullo, esiste l'inverso $\frac {1}{z}$ .
 \\
 Oltretutto, vale la proprietà distrubutiva fra il prodotto e l'addizione, cioè:
-\begin{equation}
-(z_1 +z_2 )z_3 =z_1 z_3 + z_2 z_3
-\end{equation}
+$$(z_1 +z_2 )z_3 =z_1 z_3 + z_2 z_3$$
 La seguente proposizione è stata dimostrata da Hamkel:
 \begin{teorema}
 $\C$  è il più generale campo che soddisfa tutte le proprietà algebriche, cioè non posso costruire un campo più grande che mantenga verificate tali proprietà.
@@ -43,30 +41,22 @@ $\C$  è il più generale campo che soddisfa tutte le proprietà algebriche, cio
 Questo vuol dire che ogni passo avanti corrisponde alla perdita di validità di una proprietà algebrica (ad esempio, nei quaternioni\footnote{Corpo non commutativo che, similmente al campo complesso, ha delle unità ''immaginarie'' (come $i$ per i complessi). Si veda \url{https://it.wikipedia.org/wiki/Quaternione} per approfondimenti (tranquilli, non fa parte del corso).} non vale la commutatività).
 \\
 Gli elementi del tipo $(x;0)$, cioè gli elementi del campo reale, formano un sottocampo del campo complesso, cioè $\R$ è un sottocampo di $\C$. Questo porta a definire il prodotto per uno scalare:
-\begin{equation}
-x(x';y')=(x;0) (x';y')=(xx';xy')
-\end{equation}
+$$x(x';y')=(x;0) (x';y')=(xx';xy')$$
 Sfruttando questa proprietà, vediamo che possiamo scrivere un qualsiasi numero complesso come:
-\begin{equation}
-(x;y)=x(1;0)+y(0;1)=x+iy
-\end{equation}
+$$(x;y)=x(1;0)+y(0;1)=x+iy$$
 Dove $i$ rappresenta l'unità dell'asse immaginario, cioè il vettore (0;1). Si noti che $i$ è anche la radice di -1; infatti:
 $$i^2=(0;1) (0;1)=(0-1;0+0)=(-1;0)=-1$$
 
 Definiamo ora il numero complesso coniugato, cioè quel numero (complesso) tale che, se $z$ è scritto come $x+iy$, si ha che il complesso coniugato risulta:
-\begin{equation}
-\overline{z}=x-iy
-\end{equation}
+$$\overline{z}=x-iy$$
 Risulta ovvio che $\overline{\overline{z}}=z$.
 
 Infine, definiamo il modulo di un numero complesso $z$ come la somma in quadratura della parte reale e della parte immaginaria, cioè:
-\begin{equation}
-|z|=\sqrt{x^2+y^2}\geq0 \, \, \, \forall z
-\end{equation}
+$$|z|=\sqrt{x^2+y^2}\geq0 \, \, \, \forall z$$
 \clearpage
 Vediamo ora alcune proprietà dei complessi:
 \begin{itemize}
-\item $\overline{z_1 z_2}=\overline{z_1} \overline{z_2}$
+\item $\overline{z_1 z_2}=\overline{z_1} \, \overline{z_2}$
 \item $Re(z)=x=\frac{z+\overline{z}}{2}$
 \item $Im(z)=y=\frac{z-\overline{z}}{2i}$
 \item $|z|=0 \iff z=0$
@@ -75,35 +65,28 @@ Vediamo ora alcune proprietà dei complessi:
 \end{itemize}
 %%Regola del parallelogramma%%
 Introduciamo ora due nuovi tipi di rappresentazione del numero complesso $z$. La prima tipologia è detta rappresentazione polare; si ha che:
-\begin{equation}
-z=x+iy=|z| \left(\frac{x}{|z|}+i \frac{y}{|z|}\right)=|z|(cos(\theta) +i sen(\theta))
-\end{equation}\\Infatti sia la parte reale sia la parte immaginaria sono (in modulo) $\leq 1$, e la somma dei loro quadrati dà 1; quindi,  essi rappresentano il seno e il coseno di un angolo $\theta$ tale che $tg(\theta)=\frac{y}{x}$ .
+$$z=x+iy=|z| \left(\frac{x}{|z|}+i \frac{y}{|z|} \right) =|z|(cos(\theta) +i sen(\theta))$$
+Infatti sia la parte reale sia la parte immaginaria sono (in modulo) $\leq 1$, e la somma dei loro quadrati dà 1; quindi,  essi rappresentano il seno e il coseno di un angolo $\theta$ tale che $tg(\theta)=\frac{y}{x}$ .
 \\
 \\
 Il secondo tipo di rappresentazione è chiamata rappresentazione esponenziale ed è strettamente legato alla rappresentazione polare; infatti possiamo scrivere:
-\begin{equation}
-z=|z| (cos(\theta) +i sen(\theta))=|z| e^{i \theta}
-\end{equation}
+$$z=|z| (cos(\theta) +i sen(\theta))=|z| e^{i \theta}$$
 Questa modalità di rappresentazione dei complessi ci è molto utile nel prodotto fra due numeri complessi; infatti, scrivendo $z_1$ e $z_2$ in forma esponenziale, risulta facile verificare che $z_1 z_2=|z_1||z_2|(cos(\theta + \phi) +i sen(\theta + \phi))$, dove $\theta$ e $\phi$ sono gli angoli relativi ai due numeri complessi presi in considerazione.
 
 Insieme alla rappresentazione esponenziale, introduciamo la funzione argomento principale $Arg(z)$ che associa ad un numero complesso un angolo $\theta \in (-\pi;\pi]$; possiamo quindi scrivere il numero complesso $z$ come:
-\begin{equation}
-z=|z| e^{i \, Arg(z)}
-\end{equation}
+$$z=|z| e^{i \, Arg(z)}$$
 
-Il motivo per cui $-\pi$ non è incluso nell'intervallo di definizione della funzione argomento principale è legato al fatto che , se così non fosse, avremmo un indecisione sulla scelta del valore dell'angolo da associare; infatti, utilizzando dei semplici limiti, si nota che sul semiasse negativo delle ascisse la funzione Arg(z) presenta una discontinuità di $2i\pi$.
+Il motivo per cui $-\pi$ non è incluso nell'intervallo di definizione della funzione argomento principale è legato al fatto che , se così non fosse, avremmo un indecisione sulla scelta del valore dell'angolo da associare; infatti, utilizzando dei semplici limiti, si nota che sul semiasse negativo delle ascisse la funzione $Arg(z)$ presenta una discontinuità di $2i\pi$.
 \\
 \\
 Una formula molto importante per muoversi nel campo complesso è la \textbf{formula di De Moivre}:
-\begin{equation}
-(cos\theta + i sen\theta)^n =con(n\theta) + i sen(n\theta)
-\end{equation}
+$$(cos\theta + i sen\theta)^n =cos(n\theta) + i sen(n\theta)$$
 Essa risulta ovvia una volta che si è riscritto il numero complesso in forma esponenziale.\\Vediamo ora come si comporta la funzione esponenziale nel campo complesso; abbiamo che:
 $$e^z=e^{x+iy}=e^x e^{iy} =e^x (cos(y)+isen(y))$$
 Le proprietà dell'esponenziale nel campo complesso sono:
 
 \begin{itemize}
-\item $\overline{e^z}=\overline{e^x e^{iy}}=\overline{e^x} \overline{e^{iy}} =e^x e^{-iy} =e^ {\overline{z}}$
+\item $\overline{e^z}=\overline{e^x e^{iy}}=\overline{e^x} \, \overline{e^{iy}} =e^x e^{-iy} =e^ {\overline{z}}$
 \item $e^z =0$ non ha soluzione
 \item $e^{z+2i\pi}=e^z$ cioè l'esponenziale è una funzione periodica sull'asse immaginario
 \end{itemize}

@@ -22,12 +22,12 @@ $$\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$$
 \begin{proof}
 Per ipotesi, esiste il $\lim_{\xi \to 0} \frac{f(z_0+ \xi)-f(z_0)}{\xi} =f'(z_0)$, con $\xi \in \C$. \\Se $\xi=h \in \R$:
 $$\frac{u(x_0 +h,y_0)+iv(x_0 +h,y_0)- (u(x_0,y_0)+iv(x_0 ,y_0)) }{h}=$$
-$$=\frac{u(x_0 +h,y_0)+u(x_0,y_0)}{h} -i\frac{v(x_0+h,y_0)+v(x_0 ,y_0)}{h} \to f'(z_0) \text{ per } h \to 0$$
+$$=\frac{u(x_0 +h,y_0)-u(x_0,y_0)}{h} +i\frac{v(x_0+h,y_0)-v(x_0 ,y_0)}{h} \to f'(z_0) \text{ per } h \to 0$$
 Quindi, otteniamo che 
 $$\left. f'(z_0)=\frac{\partial u}{\partial x} \right|_{(x_0,y_0)} +i  \left. \frac{\partial v}{\partial x} \right|_{(x_0,y_0)}$$
 Se invece $\xi=ih$, abbiamo:
 $$\frac{u(x_0,y_0+h)+iv(x_0,y_0+h)-(u(x_0,y_0)+iv(x_0 ,y_0))}{ih}=$$
-$$=\frac{u(x_0,y_0+h)+u(x_0,y_0)}{ih}-i\frac{v(x_0,y_0+h)+v(x_0 ,y_0)}{ih} \to f'(z_0) \text{ per } h \to 0$$
+$$=\frac{u(x_0,y_0+h)-u(x_0,y_0)}{ih}+i\frac{v(x_0,y_0+h)-v(x_0 ,y_0)}{ih} \to f'(z_0) \text{ per } h \to 0$$
 Quindi, otteniamo che 
 $$f'(z_0)=\left. \frac{1}{i} \frac{\partial u}{\partial y} \right|_{(x_0,y_0)} +\left. \frac{\partial v}{\partial y} \right|_{(x_0,y_0)}=\left. \frac{\partial v}{\partial y} \right|_{(x_0,y_0)}-i \left. \frac{\partial u}{\partial y} \right|_{(x_0,y_0)}$$
 Confrontando i due risultati, otteniamo la tesi.
