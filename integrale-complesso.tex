@@ -1,3 +1,4 @@
+%PRECEDENTE: variabile-complessa
 \chapter{L'integrale complesso}
 
 Siamo abituati ad effettuare integrali su linee; abbiamo quindi bisogno di definire una curva in $\C$:
@@ -112,3 +113,5 @@ Sia $f$ una funzione continua su un dominio $\mathcal{D}$ e olomorfa su $\mathca
 \begin{proof}
 Se il punto è all'interno del rettangolo, lo isoliamo con delle strisce verticali e orizzontali; è evidente che possiamo scrivere il rettangolo $\mathfrak{R}$ come la somma dei rettangoli $\mathfrak{R}_i$, e vale ancora la legge di cancellazione dei tratti in comune; quindi $\mathcal{I}=\sum_i \int_{\partial \mathfrak{R}_i} f(z)dz$. \\ Di questa sommatoria sopravvive soltanto il rettangolino contenente il punto $a$, cioè $\mathcal{I}=\int_{\partial \mathfrak{r}} f(z)dz$. A questo punto, possiamo scrivere che $|\mathcal{I}| \leq \sup_{z \in \mathfrak{r}} |f(z)| L(\mathfrak{r})$, dove $L(\mathfrak{r})$ è il perimetro del rettangolino. \\ Giocando sul fatto che possiamo prendere il rettangolo $\mathfrak{r}$ piccolo a piacere, facciamo tendere a zero il perimetro e quindi otteniamo la tesi.\\Se invece il punto è sul bordo, procediamo in maniera analoga; cambia solo la ''divisione'' del rettangolo (in questo caso, avremo che una delle due strisce è a ridosso del lato al quale appartiene $a$).
 \end{proof}
+
+%SUCCESSIVO: funzioni-intere
